@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Ticket Price Count And Selection</title>
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- CDN Link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body>
+    <main class="container mx-auto mt-10 mb-32">
+        <section class="grid grid-cols-3 gap-5">
+
+            <div class="col-span-2 border border-red-700">
+                <div>
+                    <div class="stat-title">Available Seat</div>
+                    <div id="available-seat" class="stat-value">40</div>
+                </div>
+                <h2 class="font-semibold text-2xl">Select Your Seat</h2>
+
+
+                <div class="border-b-2 border-dashed my-4 "></div>
+
+                <div class="flex justify-between">
+                    <div>
+                        <i class="fa-solid fa-car"></i> <span class="font-medium text-lg">Available</span>
+                    </div>
+                    <div class="text-[#1DD100]">
+                        <i class="fa-solid fa-car"></i> <span class="font-medium text-lg">Selected</span>
+                    </div>
+                </div>
+
+                <!-- Border div -->
+                <div class="border-b-2 border-dashed my-4 "></div>
+
+                <div class=" flex justify-end mb-10">
+                    <button class="grid grid-cols-2 col-span-2 btn btn-md "><img src="images/wheel.png" alt=""></button>
+                </div>
+                <!-- Row 1 -->
+
+                <div class="col-span-11 grid grid-cols-10 gap-16 items-center text-center space-y-7">
+                    <p class="col-span-1">A</p>
+                    <button onclick="handlerSelectSeat(this)" class="col-span-2 btn btn-md">A1</button>
+                    <button onclick="handlerSelectSeat(this)" class="col-span-2 btn btn-md">A2</button>
+                    <p class="col-span-1"></p>
+                    <button onclick="handlerSelectSeat(this)" class="col-span-2 btn btn-md">A3</button>
+                    <button onclick="handlerSelectSeat(this)" class="col-span-2 btn btn-md">A4</button>
+                </div>
+                <div class="col-span-11 grid grid-cols-10 gap-16 items-center text-center space-y-7">
+                    <p class="col-span-1">B</p>
+                    <button onclick="handlerSelectSeat(this)" class="col-span-2 btn btn-md">B1</button>
+                    <button onclick="handlerSelectSeat(this)" class="col-span-2 btn btn-md">B2</button>
+                    <p class="col-span-1"></p>
+                    <button onclick="handlerSelectSeat(this)" class="col-span-2 btn btn-md">B3</button>
+                    <button onclick="handlerSelectSeat(this)" class="col-span-2 btn btn-md">B4</button>
+                </div>
+                <div class="col-span-11 grid grid-cols-10 gap-16 items-center text-center space-y-7">
+                    <p class="col-span-1">C</p>
+                    <button onclick="handlerSelectSeat(this)" class="col-span-2 btn btn-md">C1</button>
+                    <button onclick="handlerSelectSeat(this)" class="col-span-2 btn btn-md">C2</button>
+                    <p class="col-span-1"></p>
+                    <button onclick="handlerSelectSeat(this)" class="col-span-2 btn btn-md">C3</button>
+                    <button onclick="handlerSelectSeat(this)" class="col-span-2 btn btn-md">C4</button>
+                </div>
+                <div class="col-span-11 grid grid-cols-10 gap-16 items-center text-center space-y-7">
+                    <p class="col-span-1">D</p>
+                    <button onclick="handlerSelectSeat(this)" class="col-span-2 btn btn-md">D1</button>
+                    <button onclick="handlerSelectSeat(this)" class="col-span-2 btn btn-md">D2</button>
+                    <p class="col-span-1"></p>
+                    <button onclick="handlerSelectSeat(this)" class="col-span-2 btn btn-md">D3</button>
+                    <button onclick="handlerSelectSeat(this)" class="col-span-2 btn btn-md">D4</button>
+                </div>
+                <div class="col-span-11 grid grid-cols-10 gap-16 items-center text-center space-y-7">
+                    <p class="col-span-1">E</p>
+                    <button onclick="handlerSelectSeat(this)" class="col-span-2 btn btn-md">E1</button>
+                    <button onclick="handlerSelectSeat(this)" class="col-span-2 btn btn-md">E2</button>
+                    <p class="col-span-1"></p>
+                    <button onclick="handlerSelectSeat(this)" class="col-span-2 btn btn-md">E3</button>
+                    <button onclick="handlerSelectSeat(this)" class="col-span-2 btn btn-md">E4</button>
+                </div>
+                <div class="col-span-11 grid grid-cols-10 gap-16 items-center text-center space-y-7">
+                    <p class="col-span-1">F</p>
+                    <button onclick="handlerSelectSeat(this)" class="col-span-2 btn btn-md">F1</button>
+                    <button onclick="handlerSelectSeat(this)" class="col-span-2 btn btn-md">F2</button>
+                    <p class="col-span-1"></p>
+                    <button onclick="handlerSelectSeat(this)" class="col-span-2 btn btn-md">F3</button>
+                    <button onclick="handlerSelectSeat(this)" class="col-span-2 btn btn-md">F4</button>
+                </div>
+                <div class="col-span-11 grid grid-cols-10 gap-16 items-center text-center space-y-7">
+                    <p class="col-span-1">G</p>
+                    <button onclick="handlerSelectSeat(this)" class="col-span-2 btn btn-md">G1</button>
+                    <button onclick="handlerSelectSeat(this)" class="col-span-2 btn btn-md">G2</button>
+                    <p class="col-span-1"></p>
+                    <button onclick="handlerSelectSeat(this)" class="col-span-2 btn btn-md">G3</button>
+                    <button onclick="handlerSelectSeat(this)" class="col-span-2 btn btn-md">G4</button>
+                </div>
+                <div class="col-span-11 grid grid-cols-10 gap-16 items-center text-center space-y-7">
+                    <p class="col-span-1">H</p>
+                    <button onclick="handlerSelectSeat(this)" class="col-span-2 btn btn-md">H1</button>
+                    <button onclick="handlerSelectSeat(this)" class="col-span-2 btn btn-md">H2</button>
+                    <p class="col-span-1"></p>
+                    <button onclick="handlerSelectSeat(this)" class="col-span-2 btn btn-md">H3</button>
+                    <button onclick="handlerSelectSeat(this)" class="col-span-2 btn btn-md">H4</button>
+                </div>
+                <div class="col-span-11 grid grid-cols-10 gap-16 items-center text-center space-y-7">
+                    <p class="col-span-1">I</p>
+                    <button onclick="handlerSelectSeat(this)" class="col-span-2 btn btn-md">I1</button>
+                    <button onclick="handlerSelectSeat(this)" class="col-span-2 btn btn-md">I2</button>
+                    <p class="col-span-1"></p>
+                    <button onclick="handlerSelectSeat(this)" class="col-span-2 btn btn-md">I3</button>
+                    <button onclick="handlerSelectSeat(this)" class="col-span-2 btn btn-md">I4</button>
+                </div>
+                <div class="col-span-11 grid grid-cols-10 gap-16 items-center text-center space-y-7">
+                    <p class="col-span-1">J</p>
+                    <button onclick="handlerSelectSeat(this)" class="col-span-2 btn btn-md">J1</button>
+                    <button onclick="handlerSelectSeat(this)" class="col-span-2 btn btn-md">J2</button>
+                    <p class="col-span-1"></p>
+                    <button onclick="handlerSelectSeat(this)" class="col-span-2 btn btn-md">J3</button>
+                    <button onclick="handlerSelectSeat(this)" class="col-span-2 btn btn-md">J4</button>
+                </div>
+
+            </div>
+            <div class="border border-red-700">
+                <h2 class="font-semibold text-2xl mb-12">Select Your Seat</h2>
+                <div class="bg-[#F7F8F8] p-8 rounded-xl">
+                    <div class="grid grid-cols-3 text-center gap-16">
+                        <p>Seat (<span id="select-total-seat">0</span>)</p>
+                        <p>class</p>
+                        <p>Price</p>
+                    </div>
+                    <div class="text-center mt-10 mb-10">
+                        <ul id="selected-seat" class="space-y-5">
+
+                        </ul>
+                        <span id="default-text" class="text-red-700 font-bold text-3xl">No Seat Selected</span>
+                    </div>
+                    <div class="flex justify-between mb-10">
+                        <div class="font-medium text-lg">Total Price</div>
+                        <div class="font-medium text-lg">BDT: <span id="total-price">****</span></div>
+                    </div>
+
+                    <div id="show-coupon-price" class="ml-2">
+                        <input id="coupon-filed" disabled type="text" placeholder="Have any coupon?"
+                            class="input input-bordered w-full max-w-xs" />
+                        <button id="btn-filed" disabled
+                            class="btn bg-[#1DD100] text-white hover:bg-black">Apply</button>
+                    </div>
+                    <div class="flex justify-between mt-6">
+                        <div class="font-medium text-lg ">Grand Total</div>
+                        <div class="font-medium text-lg">BDT: <span id="grand-price">***</span></div>
+                    </div>
+                </div>
+                <div class="card  shrink-0">
+                    <form class="card-body ">
+                        <div class="form-control ">
+                            <label class="label">
+                                <span class="label-text font-semibold text-base">Passenger Name*</span>
+                            </label>
+                            <input type="email" placeholder="Enter your name" class="input input-bordered " />
+                        </div>
+                        <div class="form-control">
+                            <label class="label">
+                                <span class="label-text font-semibold text-base">Phone Number*</span>
+                            </label>
+                            <input id="phone-number" type="number" placeholder="Enter your phone number"
+                                class="input input-bordered" required />
+
+                        </div>
+                        <div class="form-control ">
+                            <label class="label">
+                                <span class="label-text font-semibold text-base">Email ID</span>
+                            </label>
+                            <input type="email" placeholder="Enter your email id" class="input input-bordered " />
+                        </div>
+                        <div class="form-control mt-6">
+                            <button id="btn-next"
+                                class="btn bg-[#1DD100] text-white font-extrabold text-xl hover:bg-black rounded-full"
+                                disabled>Next</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
